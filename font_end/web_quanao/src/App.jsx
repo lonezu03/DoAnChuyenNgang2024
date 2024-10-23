@@ -8,6 +8,7 @@ import Dangky from './component/dangky.jsx'
 import Footer2 from './component/footer2.jsx'
 import DetailItem from './component/chitietSP.jsx'
 import Description from './component/description.jsx';
+import AboutUs2 from './component/aboutus2.jsx'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
      <div><Footer2/></div>
      <div><DetailItem/></div>
      <div><Description/></div>
+     <div><AboutUs2/></div>
     </div>
   )
 }

@@ -8,7 +8,11 @@ const RegisterForm = () => {
     phoneNumber: '',
     password: '',
   });
+  const [showPassword, setShowPassword] = useState(false);
 
+  const toggleShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
   // Hàm xử lý khi nhập liệu vào các input
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -99,15 +103,24 @@ const RegisterForm = () => {
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
             Password
           </label>
+          <div className="relative">
           <input
             id="password"
-            type="password"
+            type={showPassword ? 'text' : 'password'}
             value={formData.password}
             onChange={handleChange}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="Enter your password"
             required
           />
+           <button
+              type="button"
+              onClick={toggleShowPassword}
+              className="absolute inset-y-0 right-0 px-3 text-gray-700 focus:outline-none"
+            >
+              {showPassword ? 'Hide' : 'Show'}
+            </button>
+            </div>
         </div>
 
         {/* Submit button */}

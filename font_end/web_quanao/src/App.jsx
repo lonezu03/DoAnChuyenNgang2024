@@ -1,30 +1,28 @@
 
 import './App.css'
-import Menu from './component/menu.jsx'
-import Banner from './component/baner.jsx'
-import ListSP from './component/listSP.jsx'
-import Login from './component/login.jsx'
-import Dangky from './component/dangky.jsx'
-import Footer2 from './component/footer2.jsx'
-import DetailItem from './component/chitietSP.jsx'
-import Description from './component/description.jsx';
-import AboutUs2 from './component/aboutus2.jsx'
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Shop from './component/trang/shop.jsx';
+import Aboutus from './component/trang/aboutuslon.jsx';
+import Dangky from './component/trang/dangky.jsx';
+import Dangnhap from './component/trang/dangnhap.jsx';
+import ChitietSP from './component/trang/chitiet_sp.jsx';
+import Giohanglon from './component/trang/giohanglon.jsx';
 function App() {
-
+ 
+  
   return (
-    <div className='static'>
-    <div className='static'><Menu/></div>
-     <div className='relative translate-y-20'><Banner/></div>
-     <div><ListSP/></div>
-     <div><Login/></div>
-     <div><Dangky/></div>
-     {/* <div><Footer/></div> */}
-     <div><Footer2/></div>
-     <div><DetailItem/></div>
-     <div><Description/></div>
-     <div><AboutUs2/></div>
-    </div>
+    <Router>
+     <Routes>
+
+        <Route path="/chitietsp/:id" element={<ChitietSP />} />
+        <Route path="/aboutus" element={<Aboutus />} />
+        <Route path="/dangky" element={<Dangky />} />
+        <Route path="/dangnhap" element={<Dangnhap />} />
+        <Route path="/giohang" element={<Giohanglon />} />
+        <Route path="/" element={<Shop />} />
+      </Routes>
+    
+    </Router>
   )
 }
 

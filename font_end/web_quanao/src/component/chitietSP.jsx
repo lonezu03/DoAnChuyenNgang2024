@@ -1,6 +1,5 @@
 import  { useState } from 'react';
 import { FaStar, FaCartPlus, FaHeart, FaShareAlt } from 'react-icons/fa';
-import Description from './description';
 const ProductDetails = ({ product }) => {
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);
   const [selectedSize, setSelectedSize] = useState(product.sizes[0]);

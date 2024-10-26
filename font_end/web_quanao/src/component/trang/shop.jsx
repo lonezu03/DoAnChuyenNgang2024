@@ -7,12 +7,12 @@ function shop(){
     return (
         <>
             <Menu />
-            <Banner />
+            {/* <Banner /> */}
             <Filter />
             <ListSP />
             <Footer2 />
         </>
     )
- 
+
 }
 export default shop
